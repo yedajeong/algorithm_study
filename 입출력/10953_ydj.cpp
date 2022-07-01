@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     int T, split;
-    string input, A, B;
+    string input;
 
     cin >> T;
 

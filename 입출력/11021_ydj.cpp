@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-    int T, split, A, B;
-    string input;
+    int T, A, B;
 
     cin >> T;
 

@@ -16,7 +16,7 @@ int main(){
     for (int i=2; i<=N; i++){
         int sum = 0;
         for (int j=1; j<i; j++){
-            // num[i]까지 포함된 수열: num[i]가 제일 큼 & 이전 item으로 만들 수 있는 가장 긴 수열 뒤에 num[i]붙이기 
+            // num[i]까지 포함된 수열: num[i]가 제일 큼 & 이전 item으로 만들 수 있는 가장 합이 큰 수열 뒤에 num[i]붙이기 
             // dp[j] (num[j]까지 구한 최대합 증가 부분 수열) 에 제일 큰 num[i]만 추가
             if (num[j] < num[i] && sum < dp[j])
                 sum = dp[j];

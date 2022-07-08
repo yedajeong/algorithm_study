@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	int n[201] = { 0 };
+	int n[200001] = { 0 }; //다들 2차원으로 하드라...
 	int trynum;
 	cin >> trynum;
 

@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(){
-    int N, result;
-    int dp[10001]; // num[i]가 포함된 부분수열 중 최대길이 증가하는 부분수열
+    int N;
+    int dp[10001];
     int num[10001];
 
     cin >> N;

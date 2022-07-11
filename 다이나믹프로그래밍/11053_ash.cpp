@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	int dp[1001] = { 0 }; //0 -> 두번째 큰수, 1-> 가장큰수, 2-> 길이
+	int dp[1001] = { 0 };
 	int size;
 	cin >> size;
 	int num[1001] = { 0 };

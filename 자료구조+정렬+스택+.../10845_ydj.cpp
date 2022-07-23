@@ -3,7 +3,7 @@ using namespace std;
 
 class Queue{
 private:
-    int s[10000];
+    int q[10000];
     int _size;
     int _front;
     int _back;
@@ -13,7 +13,7 @@ public:
 
     void push(int x){
         _back++;
-        s[_back] = x;
+        q[_back] = x;
         _size++;
     }
 
@@ -21,7 +21,7 @@ public:
         if (empty())
             cout << -1 << "\n";
         else{
-            cout << s[_front] << "\n";
+            cout << q[_front] << "\n";
             _front++;
             _size--;
         }
@@ -40,14 +40,14 @@ public:
 
     void front(){
         if (!empty())
-            cout << s[_front] << "\n";
+            cout << q[_front] << "\n";
         else
             cout << -1 << "\n";
     }
 
     void back(){
         if (!empty())
-            cout << s[_back] << "\n";
+            cout << q[_back] << "\n";
         else
             cout << -1 << "\n";
     }

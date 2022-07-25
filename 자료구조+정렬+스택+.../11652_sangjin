@@ -1,0 +1,38 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+long long card_size[100001];
+
+int main() {
+	std::ios::sync_with_stdio(false);
+	int input_num;
+	long long card;
+	vector<long long> v;
+
+	cin >> input_num;
+
+	for (int i = 0; i < input_num; i++) {
+		cin >> card;
+		v.push_back(card);
+	}
+	sort(v.begin(), v.end());
+	
+	int cnt = 1;
+	int count = 0;
+	long long max_num = 0;
+	for (int i = 0; i < input_num - 1; i++) { // 1 1 1 2 2 
+		if (v[i] == v[i + 1]) {
+			cnt++;
+			if (cnt > count) {
+				count = cnt;
+				max_num = i;
+			}
+		}
+		else
+			cnt = 1;
+	}
+	
+	cout << v[max_num]<< '\n';
+}

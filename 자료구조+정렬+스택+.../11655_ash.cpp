@@ -10,6 +10,7 @@ int main() {
 	ios_base::sync_with_stdio(false);
 	
 	getline(cin, input);
+/*
 	for (int i = 0; i < input.length(); i++) {
 		if (input[i] > 64 && input[i] < 91) { //대문자일 때
 			if (input[i] + 13 < 91) {
@@ -28,7 +29,22 @@ int main() {
 			}
 		}
 	}
-	
+*/
+	for (int i = 0; i < input.length(); i++) {
+		if (input[i] > 64 && input[i] < 78) { //대문자일 때
+			input[i] = char(input[i] + 13);
+		}
+		else if (input[i] > 77 && input[i] < 91) {
+			input[i] == char(input[i] - 13);
+		}
+		else if (input[i] > 96 && input[i] < 110) { //소문자일때
+			input[i] = char(input[i] + 13);
+		}
+		else if (input[i] > 109 && input[i] < 123) {
+			input[i] == char(input[i] - 13);
+		}
+	}
+
 	cout << input << '\n';
 
 	return 0;

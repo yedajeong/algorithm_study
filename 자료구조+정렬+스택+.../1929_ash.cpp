@@ -23,7 +23,7 @@ int main() {
 	for (int i = 2; i <= sqrt(n); i++) { // j = i*i 이므로  i<=sqrt(n)이다.
 		if (isprime[i] == true) {
 			for (int j = i * i; j <= n; j += i) { //앞에서 지워지기 때문에 i*i부터 확인
-				isprime[j] = false;
+				if(isprime[j] == true) isprime[j] = false;
 			}
 		}
 	}

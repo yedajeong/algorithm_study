@@ -3,7 +3,7 @@ using namespace std;
 
 int a[1000001] = { 0 };
 int b[1000001] = { 0 };
-int c[2000002] = { 0 };
+int c[2000002] = { 0 }; //합친배열
 
 int main() {
 	cin.tie(0); cout.tie(0);

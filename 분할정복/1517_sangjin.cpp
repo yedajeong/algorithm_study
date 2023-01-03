@@ -50,7 +50,7 @@ void merge(long long leftFirst, long long leftLast, long long rightFirst, long l
 void mergesort(long long first, long long last) {
 	if (first < last)
 	{
-    long long middle = (first + last) / 2;
+        long long middle = (first + last) / 2;
 		mergesort(first, middle);
 		mergesort(middle + 1, last);
 		merge(first, middle, middle + 1, last);
@@ -58,7 +58,7 @@ void mergesort(long long first, long long last) {
 }
 
 int main() {
-  long long N;
+    long long N;
 	cin >> N;
 
 	for (int i = 0; i < N; i++) {
@@ -67,7 +67,7 @@ int main() {
 		bubble[i] = a;
 	}
 
-  mergesort(0, N - 1);
+    mergesort(0, N - 1);
 
 	cout << cnt << endl;
 }

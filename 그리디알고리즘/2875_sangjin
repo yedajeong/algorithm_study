@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int N, M, K;
+
+	cin >> N >> M >> K;
+
+	int n_cnt = N / 2;
+	int m_cnt = M;
+	
+	while (K > 0) {
+		if (n_cnt >= m_cnt) {
+			N--;
+			K--;
+		}
+		else {
+			M--;
+			K--;
+		}	
+		n_cnt = N / 2;
+		m_cnt = M;
+	}
+
+	n_cnt = N / 2;
+	m_cnt = M;
+
+	cout << min(n_cnt, m_cnt) << endl;
+}

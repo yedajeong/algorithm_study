@@ -5,7 +5,14 @@ using namespace std;
 
 bool cmp(const pair<int, int>& a, const pair<int, int>& b)
 {
-	return a.second < b.second;
+	if (a.second < b.second) {
+		return true;
+	}
+	else if (a.second == b.second) {
+		return a.first < b.first;
+	}
+	else
+		return false;
 }
 
 
@@ -18,7 +25,7 @@ int main() {
 		cin >> start >> end;
 		conf.push_back(make_pair(start, end));
 	}
-	
+
 	sort(conf.begin(), conf.end(), cmp);
 	//그냥 sort는 정수를 자료형으로 갖는 pair의 first를 1차, second를 2차로 오름차순 정렬한다.
 
@@ -34,3 +41,4 @@ int main() {
 
 	cout << count;
 }
+
